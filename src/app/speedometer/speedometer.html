@@ -1,0 +1,13 @@
+<div class="speed-display"
+     [class.low-speed]="speed() <= 30"
+     [class.medium-speed]="speed() > 30 && speed() <= 70"
+     [class.high-speed]="speed() > 70 && speed() <= 120"
+     [class.danger-speed]="speed() > 120">
+  <h2> &nbsp;&nbsp; Velocidad: {{ speed() }} km/h</h2>
+</div>
+
+<div class="controls">
+  <button (click)="acelerar()">Acelerar</button>
+  <button (click)="frenar()">Frenar</button>
+  <button (click)="reiniciar()">Reiniciar</button>
+</div>

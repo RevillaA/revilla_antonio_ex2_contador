@@ -1,0 +1,54 @@
+.container {
+  text-align: center;
+  margin-top: 50px;
+  padding: 0 20px;
+}
+
+.speed-display {
+  margin: auto;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 10px;
+  color: white;
+  font-size: 26px;
+  margin-bottom: 30px;
+  margin-top: 160px;
+  justify-content: center;
+}
+
+.low-speed {
+  background-color: #4caf50; 
+}
+
+.medium-speed {
+  background-color: #ff9800; 
+}
+
+.high-speed {
+  background-color: #f44336; 
+}
+
+.danger-speed {
+  background-color: #b71c1c; 
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.controls button {
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 10px;
+  background-color: #03a9f4; 
+  color: white;
+  border: none;
+}
+
+.controls button:hover {
+  background-color: #0277bd; 
+}

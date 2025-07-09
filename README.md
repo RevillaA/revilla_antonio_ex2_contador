@@ -26,7 +26,17 @@ docker run -dit -p 8080:80 --name c-contador --rm revilla_antonio_ex2_contador:v
 docker image tag revilla_antonio_ex2_contador:v1 antonio215/web-revilla-antonio:v1
 ```
 
+## Pushear la imagen a Docker Hub (debe estar logeado)
 ```bash
 docker push <usuario-dockerhub/web-revilla-antonio:v1
 docker push antonio215/web-revilla-antonio:v1
 ```
+
+## Pullear la imagen a Docker Hub (debe estar logeado)
+```bash
+docker pull <usuario-dockerhub/web-revilla-antonio:v1
+docker pull antonio215/web-revilla-antonio:v1
+
+docker run -dit -p 8080:80 --name c-contador --rm antonio215/web-revilla-antonio:v1
+```
+

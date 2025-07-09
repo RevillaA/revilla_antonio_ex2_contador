@@ -1,59 +1,33 @@
-# RevillaAntonioEx2Contador
+# Proyecto Angular - Contador de Velocidad Dockerizado
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.1.
+Este documento describe los pasos para construir, listar y ejecutar el contenedor Docker para la aplicación Angular `revilla_antonio_ex2_contador`.
 
-## Development server
+---
 
-To start a local development server, run:
+## 1. Construir la imagen Docker
 
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Desde la raíz del proyecto (donde está el Dockerfile), ejecuta:
 
 ```bash
-ng generate component component-name
+docker build -t revilla_antonio_ex2_contador:v1 .
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
+## 2. Crear el contenedor con la imagen
+```bash
+docker run -dit -p 8080:80 --name c-contador --rm revilla_antonio_ex2_contador:v1
+```
+
+---
+## 3. Cargar la imagen
+
+### Etiquetar la imagen
+```bash
+docker image tag revilla_antonio_ex2_contador:v1 antonio215/web-revilla-antonio:v1
+```
 
 ```bash
-ng generate --help
+docker pull <usuario-dockerhub>/web-revilla-antonio:v1
+
+docker push antonio215/web-revilla-antonio:v1
 ```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

@@ -27,7 +27,6 @@ docker image tag revilla_antonio_ex2_contador:v1 antonio215/web-revilla-antonio:
 ```
 
 ```bash
-docker pull <usuario-dockerhub>/web-revilla-antonio:v1
-
+docker push <usuario-dockerhub/web-revilla-antonio:v1
 docker push antonio215/web-revilla-antonio:v1
 ```
